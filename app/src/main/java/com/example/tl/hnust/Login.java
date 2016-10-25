@@ -28,6 +28,8 @@ public class Login extends Activity implements View.OnClickListener{
         editText_admin=(EditText)findViewById(R.id.login_admin) ;
         editText_password=(EditText)findViewById(R.id.login_password);
         login.setOnClickListener(this);
+
+
     }
 
     @Override
