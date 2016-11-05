@@ -12,13 +12,43 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:src="@drawable/back"/>
-    <RelativeLayout
+        android:layout_weight="3"
+        android:src="@drawable/x"/>
+
+    <RadioGroup
+        android:id="@+id/rg"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@drawable/test"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="#F8F8FF">
+        <RadioButton
+            android:id="@+id/a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="院领导"
+            android:checked="true"
+            />
+        <RadioButton
+            android:id="@+id/b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="辅导员"
+            />
+        <RadioButton
+            android:id="@+id/c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="班主任"
+            />
+    </RadioGroup>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@drawable/a"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,12 +65,11 @@
                   <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/test"/>
+                    android:src="@drawable/l"/>
                   <EditText
                     android:id="@+id/login_admin"
                     android:layout_width="200dp"
                     android:layout_height="50dp"
-                    android:background="#1E90FF"
                     android:maxLines="1"
                     android:hint="admin"
                     />
@@ -50,12 +79,11 @@
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/back"/>
+                        android:src="@drawable/k"/>
                     <EditText
                         android:id="@+id/login_password"
                         android:layout_width="200dp"
                         android:layout_height="50dp"
-                        android:background="#1E90FF"
                         android:maxLines="1"
                         android:hint="password"
                         />
@@ -67,7 +95,8 @@
                 android:layout_height="50dp"
                 android:layout_width="100dp"
                 android:layout_gravity="center"
-                android:text="登陆"/>
+                android:text="登陆"
+                android:background="#3e7c7d80" />
         </LinearLayout>
 
     </RelativeLayout>
