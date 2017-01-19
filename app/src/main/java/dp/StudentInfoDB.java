@@ -41,16 +41,24 @@ public class StudentInfoDB {
         }
         return studentInfoDB;
     }
+
     //从数据库读取学生列表
     public List<Person> loadStudentList(){
         final List <Person> list=new ArrayList<Person>();
-        final Cursor cursor=db.query("StudentList",null,null,null,null,null,null);
+        final Cursor cursor=db.query("StudentInfo",null,null,null,null,null,null);
         if(cursor.moveToFirst()){
             do{
                 final String name=cursor.getString(cursor.getColumnIndex("name"));
                 final int id=cursor.getInt(cursor.getColumnIndex("code"));
                 final String imageId=cursor.getString(cursor.getColumnIndex("image"));
-                Person person=new Person(name,id,"http://"+imageId);
+                final String sex=cursor.getString(cursor.getColumnIndex("sex"));
+                final String home=cursor.getString(cursor.getColumnIndex("home"));
+                final String phone=cursor.getString(cursor.getColumnIndex("phone"));
+                final String address=cursor.getString(cursor.getColumnIndex("address"));
+                final String number=cursor.getString(cursor.getColumnIndex("number"));
+                final String qq=cursor.getString(cursor.getColumnIndex("qq"));
+                final String remarks=cursor.getString(cursor.getColumnIndex("remarks"));
+                Person person=new Person(name,id,"http://"+imageId,address,sex,number,qq,remarks,home,phone);
                 list.add(person);
             }while (cursor.moveToNext());
         }
@@ -61,6 +69,7 @@ public class StudentInfoDB {
     }
     //处理返回数据存到数据库
     public synchronized  boolean handleStudentListResponse(String response){
+            db.execSQL("delete from StudentInfo");
         try{
             JSONArray jsonArray=new JSONArray(response);
             for(int i=0;i<jsonArray.length();i++){
@@ -68,11 +77,25 @@ public class StudentInfoDB {
                 String name=jsonObject.getString("XM");
                 int id=jsonObject.getInt("XH");
                 String imageId=jsonObject.getString("image");
+                String sex=jsonObject.getString("sex");
+                String address=jsonObject.getString("address");
+                String phone=jsonObject.getString("phone");
+                String home=jsonObject.getString("home");
+                String number=jsonObject.getString("number");
+                String qq=jsonObject.getString("QQ");
+                String remarks=jsonObject.getString("remarks");
                 ContentValues values=new ContentValues();
+                values.put("sex",sex);
+                values.put("address",address);
+                values.put("home",home);
+                values.put("phone",phone);
+                values.put("qq",qq);
+                values.put("number",number);
+                values.put("remarks",remarks);
                 values.put("name",name);
                 values.put("code",id);
                 values.put("image",imageId);
-                db.insert("StudentList",null,values);
+                db.insert("StudentInfo",null,values);
             }
 
         }catch (Exception e){
@@ -80,4 +103,5 @@ public class StudentInfoDB {
         }
         return true;
     }
+
 }

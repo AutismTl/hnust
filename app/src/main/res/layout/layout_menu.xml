@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6d6c6"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="50%"
+        app:layout_widthPercent="100%"
+        android:layout_centerVertical="true"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+ >
+
+
+    <Button
+        android:id="@+id/updata"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="20%"
+        android:textSize="24dp"
+        app:layout_widthPercent="80%"
+        android:textColor="#000000"
+        android:background="#00000000"
+        android:drawableLeft="@drawable/update"
+        android:gravity="left|center_vertical"
+        android:text="  数据更新">
+    </Button>
+    <Button
+        android:id="@+id/stupdata"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/updata"
+        app:layout_heightPercent="20%"
+        android:textSize="24dp"
+        app:layout_widthPercent="80%"
+        android:drawableLeft="@drawable/gx"
+        android:textColor="#000000"
+        android:background="#00000000"
+        android:gravity="left|center_vertical"
+        android:text="  系统更新">
+    </Button>
+    <Button
+        android:id="@+id/change"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/stupdata"
+        app:layout_heightPercent="20%"
+        android:textSize="24dp"
+        app:layout_widthPercent="80%"
+        android:textColor="#000000"
+        android:background="#00000000"
+        android:drawableLeft="@drawable/dfg"
+        android:gravity="left|center_vertical"
+        android:text=" 切换用户">
+    </Button>
+    <Button
+        android:id="@+id/our"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/change"
+        app:layout_heightPercent="20%"
+        android:textSize="24dp"
+        app:layout_widthPercent="80%"
+        android:textColor="#000000"
+        android:background="#00000000"
+        android:drawableLeft="@drawable/guanyu"
+        android:gravity="left|center_vertical"
+        android:text="  关于我们">
+    </Button>
+    <Button
+        android:id="@+id/respond"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/our"
+        app:layout_heightPercent="20%"
+        android:textSize="24dp"
+        android:gravity="left|center_vertical"
+        android:drawableLeft="@drawable/hhehe"
+        app:layout_widthPercent="80%"
+        android:textColor="#000000"
+        android:background="#00000000"
+        android:text="   用户反馈">
+    </Button>
+</android.support.percent.PercentRelativeLayout>
+
+    <Button
+        android:id="@+id/changeid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_heightPercent="10%"
+        app:layout_widthPercent="40%"
+        android:textSize="22dp"
+        android:layout_alignParentBottom="true"
+        android:background="#00000000"
+        android:text="修改ID"/>
+</android.support.percent.PercentRelativeLayout>

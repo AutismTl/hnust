@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <tools.TitleLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </tools.TitleLayout>
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top"
+        android:layout_marginTop="50dp"
+        android:textSize="25dp"
+        android:text="你好，感谢使用，请在下方填写您的问题与意见"/>
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/text"
+        android:background="@android:drawable/edit_text"
+        android:hint=" 联系方式"
+        android:textSize="25dp"/>
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/edit"
+        android:layout_marginTop="30dp"
+        android:background="@android:drawable/edit_text"
+        android:hint=" 反馈内容"
+        android:textSize="25dp"/>
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit1"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:text="提交"
+        />
+</RelativeLayout>

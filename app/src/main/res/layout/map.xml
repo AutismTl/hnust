@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+            <Button
+                android:id="@+id/sc"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_widthPercent="25%"
+                app:layout_heightPercent="50%"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentTop="true"
+                android:background="#00000000"
+                android:text="上传位置"
+                />
+            <Button
+                android:id="@+id/zdsc"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_widthPercent="25%"
+                app:layout_heightPercent="50%"
+                android:layout_toRightOf="@id/sc"
+                android:layout_alignTop="@id/sc"
+                android:background="#00000000"
+                android:text="自动上传"
+                />
+            <Button
+                android:id="@+id/qxzd"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_widthPercent="25%"
+                app:layout_heightPercent="50%"
+                android:layout_alignParentTop="@id/sc"
+                android:layout_alignTop="@id/sc"
+                android:layout_toRightOf="@id/zdsc"
+                android:background="#00000000"
+                android:text="取消自动"
+                />
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_widthPercent="25%"
+                app:layout_heightPercent="50%"
+                android:layout_toRightOf="@id/qxzd"
+                android:layout_alignTop="@id/sc"
+                android:background="#00000000"
+                android:text="清除信息"
+                />
+
+        <Button
+            android:id="@+id/gx"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="25%"
+            app:layout_heightPercent="50%"
+            android:layout_below ="@id/sc"
+            android:background="#00000000"
+            android:text="更新地图"
+            />
+        <Button
+            android:id="@+id/blank"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="25%"
+            app:layout_heightPercent="50%"
+            android:layout_below ="@id/sc"
+            android:layout_toRightOf="@id/gx"
+            android:background="#00000000"
+            android:text="空白地图"
+            />
+        <Button
+            android:id="@+id/wx"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="25%"
+            app:layout_heightPercent="50%"
+            android:layout_below ="@id/sc"
+            android:layout_toRightOf="@id/blank"
+            android:background="#00000000"
+            android:text="卫星地图"
+            />
+        <Button
+            android:id="@+id/jt"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_widthPercent="25%"
+            app:layout_heightPercent="50%"
+            android:layout_below ="@id/sc"
+            android:layout_toRightOf="@id/wx"
+            android:background="#00000000"
+            android:text="交通地图"
+            />
+    </android.support.percent.PercentRelativeLayout>
+</FrameLayout>

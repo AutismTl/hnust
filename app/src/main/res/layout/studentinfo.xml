@@ -1,9 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="2"
-    >
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <tools.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </tools.TitleLayout>
+    <android.support.percent.PercentRelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d0d6df">
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="36%"
+            app:layout_widthPercent="39%"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/mm"/>
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="9%"
+            app:layout_widthPercent="62%"
+            android:layout_toRightOf="@id/image"
+            android:text=" 姓名：唐亮亮"
+            android:textIsSelectable="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/rounded_editview"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/sex"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="9%"
+            app:layout_widthPercent="62%"
+            android:layout_below="@id/name"
+            android:layout_toRightOf="@id/image"
+            android:text=" 性别：男"
+            android:textIsSelectable="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/rounded_editview"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/ss"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="9%"
+            app:layout_widthPercent="62%"
+            android:layout_below="@id/sex"
+            android:layout_toRightOf="@id/image"
+            android:text=" 宿舍：暂无"
+            android:textIsSelectable="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/rounded_editview"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/qq"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="9%"
+            app:layout_widthPercent="62%"
+            android:layout_below="@id/ss"
+            android:layout_toRightOf="@id/image"
+            android:text=" QQ：840209925"
+            android:textIsSelectable="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/rounded_editview"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/xh"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="100%"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/qq"
+            android:text="学号：1503040213"
+            android:textIsSelectable="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/rounded_editview"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/xshm"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="100%"
+            android:layout_below="@id/xh"
+            android:text="联系方式 (学生)：183-9024-6202"
+            android:textIsSelectable="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/rounded_editview"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/fmhm"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="100%"
+            android:layout_below="@id/xshm"
+            android:text="联系方式 (父母)：暂无"
+            android:textIsSelectable="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/rounded_editview"
+            android:textSize="20dp" />
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:lines="2"
+            app:layout_heightPercent="15%"
+            app:layout_widthPercent="100%"
+            android:layout_below="@id/fmhm"
+            android:text="家庭住址：湖南省衡阳市珠晖区红星菜园6栋七单元109"
+            android:textIsSelectable="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/rounded_editview"
+            android:textSize="20dp" />
+        <Button
+            android:id="@+id/dh"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="12%"
+            app:layout_widthPercent="18%"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:background="@drawable/phone"
+            />
+        <Button
+            android:id="@+id/dx"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="12%"
+            app:layout_widthPercent="18%"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:background="@drawable/dx"
+            />
+
+
+    </android.support.percent.PercentRelativeLayout>
 
 </LinearLayout>
+

@@ -11,16 +11,16 @@ public class StudentInfoOpenHelper extends SQLiteOpenHelper {
     /*
     建表
      */
-    public  static final String CREATE_STUDENTLIST="create table StudentList("
-            + "id integer primary key autoincrement,"
-            + "name text,"
-            + "code integer,"
-            + "image text)";
     public static final String CREATE_STUDENTINFO ="create table StudentInfo("
             + "id integer primary key autoincrement,"
             + "address text,"
             + "number text,"
             + "sex text,"
+            + "phone text,"
+            + "home text,"
+            + "name text,"
+            + "code integer,"
+            + "image text,"
             + "qq text,"
             + "remarks text)";
     public static final  String CREATE_CLASSINFO="create table ClassInfo("
@@ -36,7 +36,6 @@ public class StudentInfoOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db){
         db.execSQL(CREATE_STUDENTINFO);
         db.execSQL(CREATE_CLASSINFO);
-        db.execSQL(CREATE_STUDENTLIST);
     }
     @Override
     public void onUpgrade(SQLiteDatabase db,int oldVersion,int newVersion){

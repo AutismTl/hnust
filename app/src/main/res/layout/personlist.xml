@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_drawerLayout"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#83aff5">
-    <tools.TitleLayout
+    android:background="@drawable/ccc">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sdf">
+    <tools.Title1
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    </tools.TitleLayout>
+    </tools.Title1>
 
     <ListView
         android:id="@+id/list_view"
@@ -14,3 +21,12 @@
         android:layout_height="match_parent">
     </ListView>
 </LinearLayout>
+    <fragment
+        android:id="@+id/id_left_menu"
+        android:name="com.example.tl.hnust.MenuLeftFragment"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:tag="LEFT" />
+
+</android.support.v4.widget.DrawerLayout>

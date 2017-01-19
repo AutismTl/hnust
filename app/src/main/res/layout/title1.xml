@@ -4,23 +4,31 @@
     android:layout_height="60dp"
     android:background="#00FFFF">
 
+    <Button
+        android:id="@+id/title_gps"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/qww"/>
 
     <Button
-        android:id="@+id/title_back"
+        android:id="@+id/title_cd"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/backk"/>
+        android:layout_marginTop="25dp"
+        android:background="@drawable/cd"/>
 
     <TextView
-        android:id="@+id/title_text"
+        android:id="@+id/title_text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="23dp"
         android:textColor="#2F4F4F"
         android:textSize="24sp"
-        android:text="学生管理"/>
+        android:text="班级"/>
 
 </RelativeLayout>

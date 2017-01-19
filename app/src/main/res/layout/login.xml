@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#fdffffff">
 
     <tools.TitleLayout
         android:layout_width="match_parent"
@@ -12,8 +13,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
-        android:src="@drawable/x"/>
+        android:layout_weight="2"
+        android:src="@drawable/hnustss"/>
 
     <RadioGroup
         android:id="@+id/rg"
@@ -23,7 +24,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:gravity="center"
-        android:background="#F8F8FF">
+        >
         <RadioButton
             android:id="@+id/a"
             android:layout_width="wrap_content"
@@ -44,61 +45,78 @@
             android:text="班主任"
             />
     </RadioGroup>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:background="@drawable/a"
-        >
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="3"
             android:layout_centerInParent="true"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <TableLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center">
-                <TableRow>
+                <TableRow
+                    android:layout_marginBottom="10dp">
                   <ImageView
                     android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/l"/>
+                    android:layout_height="40dp"
+                    android:src="@drawable/yonghu"/>
                   <EditText
-                    android:id="@+id/login_admin"
-                    android:layout_width="200dp"
-                    android:layout_height="50dp"
-                    android:maxLines="1"
-                    android:hint="admin"
+                      android:background="@android:drawable/edit_text"
+                      android:id="@+id/login_admin"
+                      android:layout_width="200dp"
+                      android:layout_height="40dp"
+                      android:maxLines="1"
+                      android:hint="admin"
                     />
                 </TableRow>
 
                 <TableRow>
                     <ImageView
                         android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/k"/>
+                        android:layout_height="40dp"
+                        android:src="@drawable/sssss"/>
                     <EditText
                         android:id="@+id/login_password"
                         android:layout_width="200dp"
-                        android:layout_height="50dp"
+                        android:layout_height="40dp"
+                        android:background="@android:drawable/edit_text"
                         android:maxLines="1"
                         android:hint="password"
                         />
                 </TableRow>
             </TableLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:id="@+id/jz"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:layout_height="wrap_content"
+                    android:text="记住密码"
+                    android:checked="true" />
+                <CheckBox
+                    android:id="@+id/zd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自动登陆"
+                    android:checked="true"
+                    />
+            </LinearLayout>
+
             <Button
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:id="@+id/login"
                 android:layout_height="50dp"
-                android:layout_width="100dp"
+                android:layout_width="250dp"
                 android:layout_gravity="center"
                 android:text="登陆"
-                android:background="#3e7c7d80" />
+                android:background="@drawable/button1" />
         </LinearLayout>
-
-    </RelativeLayout>
 
 </LinearLayout>
